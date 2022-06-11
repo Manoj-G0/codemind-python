@@ -1,11 +1,13 @@
 n=int(input())
-a=1
-b=1
-for i in range(n):
-    for i in range(n-1,i,-1):
+for i in range(1,n+1):
+    for j in range(i):
+        if j==0 or j==i-1:
+            print("*",end="")
+        else:
+            if i!=n:
+                print(" ",end="")
+            else:
+                print("*",end="")
+    for k in range(i+1,n+1):
         print(" ",end="")
-    for k in range(1,a+1):
-        print(abs(k-b),end="")
-    a+=2
-    b+=1
     print()
